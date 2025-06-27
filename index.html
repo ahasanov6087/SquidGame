@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Squid Game Light Buttons</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      margin: 10px;
+      padding: 20px 40px;
+      font-size: 24px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .green {
+      background-color: green;
+      color: white;
+    }
+    .red {
+      background-color: red;
+      color: white;
+    }
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <button class="green" onclick="playGreen()">Green Light</button>
+  <button class="red" onclick="playRed()">Red Light</button>
+
+  <script>
+    const greenAudio = new Audio('https://www.myinstants.com/media/sounds/squid-game-green-light.mp3');
+    const redAudio = new Audio('https://www.myinstants.com/media/sounds/squid-game-red-light.mp3');
+
+    function playGreen() {
+      alert('Green light');
+      greenAudio.play();
+    }
+
+    function playRed() {
+      alert('Red light');
+      redAudio.play();
+    }
+  </script>
+</body>
+</html>
